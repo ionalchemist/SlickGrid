@@ -153,8 +153,8 @@
     return {
       "init": init,
       "destroy": destroy,
-      "getGroupRowMetadata": options.getGroupRowMetadata,
-      "getTotalsRowMetadata": options.getTotalsRowMetadata
+      "getGroupRowMetadata": options.GroupRowMetadata,
+      "getTotalsRowMetadata": options.TotalsRowMetadata
     };
   }
 })(jQuery);
