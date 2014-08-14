@@ -35,7 +35,9 @@
       toggleCollapsedCssClass: "collapsed",
       enableExpandCollapse: true,
       groupFormatter: defaultGroupCellFormatter,
-      totalsFormatter: defaultTotalsCellFormatter
+      totalsFormatter: defaultTotalsCellFormatter,
+      groupRowMetadata: getGroupRowMetadata,
+      totalsRowMetadata: getTotalsRowMetadata
     };
 
     options = $.extend(true, {}, _defaults, options);
@@ -151,8 +153,8 @@
     return {
       "init": init,
       "destroy": destroy,
-      "getGroupRowMetadata": getGroupRowMetadata,
-      "getTotalsRowMetadata": getTotalsRowMetadata
+      "getGroupRowMetadata": options.getGroupRowMetadata,
+      "getTotalsRowMetadata": options.getTotalsRowMetadata
     };
   }
 })(jQuery);
